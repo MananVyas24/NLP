@@ -1,0 +1,559 @@
+
+Num sentences: 25
+
+------------------------------------------------------------
+
+Parsing Sentence #1/25.
+
+Sentence: "roger ."
+
+Tokenization: ['roger', '.']
+
+
+
+Parse #1/1:
+
+(S (CP (VAR_COMPLIANCE roger)) .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #2/25.
+
+Sentence: "roger ."
+
+Tokenization: ['roger', '.']
+
+
+
+Parse #1/1:
+
+(S (CP (VAR_COMPLIANCE roger)) .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #3/25.
+
+Sentence: "wilco ."
+
+Tokenization: ['wilco', '.']
+
+
+
+Parse #1/1:
+
+(S (CP (VAR_COMPLIANCE wilco)) .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #4/25.
+
+Sentence: "sonobuoy power ."
+
+Tokenization: ['sonobuoy', 'power', '.']
+
+
+
+Parse #1/1:
+
+(S (CP (VP (NP (N (VAR_ITEM sonobuoy))) (V power))) .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #5/25.
+
+Sentence: "DIFAR 94 away ."
+
+Tokenization: ['DIFAR', '*VAR-NUM*', 'away', '.']
+
+
+
+Parse #1/1:
+
+(S
+
+  (CP (VP (NP (N (VAR_DATA (DATATYPE DIFAR) *VAR-NUM*))) (V away)))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #6/25.
+
+Sentence: "new fix position established ."
+
+Tokenization: ['new', 'fix', 'position', 'established', '.']
+
+
+
+Parse #1/1:
+
+(S
+
+  (CP
+
+    (VP
+
+      (NP (ADJ new) (NP (N (VAR_INFO fix position))))
+
+      (V established)))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #7/25.
+
+Sentence: "standby for buoy drops ."
+
+Tokenization: ['standby', 'for', 'buoy', 'drops', '.']
+
+
+
+Parse #1/1:
+
+(S
+
+  (CP
+
+    (VP (V (VAR_INSTRUCTION standby)))
+
+    (PP (P for) (NP (N (VAR_EVENT buoy drops)))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #8/25.
+
+Sentence: "standby for localization pattern ."
+
+Tokenization: ['standby', 'for', 'localization', 'pattern', '.']
+
+
+
+Parse #1/1:
+
+(S
+
+  (CP
+
+    (VP (V (VAR_INSTRUCTION standby)))
+
+    (PP (P for) (NP (N (VAR_PHASE localization pattern)))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #9/25.
+
+Sentence: "all buoys tuned and processing ."
+
+Tokenization: ['all', 'buoys', 'tuned', 'and', 'processing', '.']
+
+
+
+Parse #1/2:
+
+(S
+
+  (CP (VP (NP (DET all) (NP (N (VAR_ITEM buoys)))) (V tuned)))
+
+  (CONJ and)
+
+  (S (CP (VP (V processing))) .))
+
+Parse #2/2:
+
+(S
+
+  (CP (VP (NP (N (VAR_ITEM all buoys))) (V tuned)))
+
+  (CONJ and)
+
+  (S (CP (VP (V processing))) .))
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #10/25.
+
+Sentence: "good signal on all buoys ."
+
+Tokenization: ['good', 'signal', 'on', 'all', 'buoys', '.']
+
+
+
+Parse #1/2:
+
+(S
+
+  (CP
+
+    (NP (ADJ (VAR_STATUS good)) (NP (N signal)))
+
+    (PP (P on) (NP (DET all) (NP (N (VAR_ITEM buoys))))))
+
+  .)
+
+Parse #2/2:
+
+(S
+
+  (CP
+
+    (NP (ADJ (VAR_STATUS good)) (NP (N signal)))
+
+    (PP (P on) (NP (N (VAR_ITEM all buoys)))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #11/25.
+
+Sentence: "sonobuoy arm , buoy available ."
+
+Tokenization: ['sonobuoy', 'arm', ',', 'buoy', 'available', '.']
+
+
+
+Parse #1/1:
+
+(S
+
+  (CP (VP (NP (N (VAR_ITEM sonobuoy))) (V arm)))
+
+  (CONJ ,)
+
+  (S (CP (NP (N (VAR_ITEM buoy))) (ADJ available)) .))
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #12/25.
+
+Sentence: "turning inbound , drop heading is 120 ."
+
+Tokenization: ['turning', 'inbound', ',', 'drop', 'heading', 'is', '*VAR-NUM*', '.']
+
+
+
+Parse #1/2:
+
+(S
+
+  (CP
+
+    (VP (V (VAR_ACTIVITY turning)))
+
+    (VP
+
+      (NP
+
+        (N (VAR_DIRECTION inbound))
+
+        (CONJ ,)
+
+        (NP (N (VAR_INFO drop heading))))
+
+      (V (AUX is))
+
+      (NP (N *VAR-NUM*))))
+
+  .)
+
+Parse #2/2:
+
+(S
+
+  (CP
+
+    (VP
+
+      (V (VAR_ACTIVITY turning))
+
+      (NP
+
+        (N (VAR_DIRECTION inbound))
+
+        (CONJ ,)
+
+        (NP (N (VAR_INFO drop heading)))))
+
+    (VP (V (AUX is)) (NP (N *VAR-NUM*))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #13/25.
+
+Sentence: "additional buoys of interest are 95 and 94 ."
+
+Tokenization: ['additional', 'buoys', 'of', 'interest', 'are', '*VAR-NUM*', 'and', '*VAR-NUM*', '.']
+
+Skipping this sentence as it takes a bit too long to parse without PCFG.
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #14/25.
+
+Sentence: "updated bearing of 095 out of DIFAR 95 ."
+
+Tokenization: ['updated', 'bearing', 'of', '*VAR-NUM*', 'out', 'of', 'DIFAR', '*VAR-NUM*', '.']
+
+Skipping this sentence as it takes a bit too long to parse without PCFG.
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #15/25.
+
+Sentence: "we are transitioning from the localization to tracking ."
+
+Tokenization: ['we', 'are', 'transitioning', 'from', 'the', 'localization', 'to', 'tracking', '.']
+
+
+
+Parse #1/2:
+
+(S
+
+  (CP
+
+    (VP
+
+      (NP (N (VAR_PRONOUN we)))
+
+      (V (AUX are) (V (VAR_ACTIVITY transitioning))))
+
+    (PP
+
+      (P from)
+
+      (NP
+
+        (DET the)
+
+        (NP
+
+          (N (VAR_PHASE localization))
+
+          (PP (P to) (NP (N (VAR_PHASE tracking))))))))
+
+  .)
+
+Parse #2/2:
+
+(S
+
+  (CP
+
+    (VP
+
+      (NP (N (VAR_PRONOUN we)))
+
+      (V (AUX are) (V (VAR_ACTIVITY transitioning))))
+
+    (PP
+
+      (P from)
+
+      (NP (DET the) (NP (N (VAR_PHASE localization))))
+
+      (PP (P to) (NP (N (VAR_PHASE tracking))))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #16/25.
+
+Sentence: "send contact report using the gentrack course and speed ."
+
+Tokenization: ['send', 'contact', 'report', 'using', 'the', 'gentrack', 'course', 'and', 'speed', '.']
+
+
+
+Parse #1/2:
+
+(S
+
+  (CP
+
+    (VP (V (VAR_INSTRUCTION send)))
+
+    (VP
+
+      (NP (N (VAR_ITEM contact report)))
+
+      (V using)
+
+      (NP
+
+        (DET the)
+
+        (NP (N (VAR_ITEM gentrack) (VAR_INFO course and speed))))))
+
+  .)
+
+Parse #2/2:
+
+(S
+
+  (CP
+
+    (VP (V (VAR_INSTRUCTION send)))
+
+    (VP
+
+      (NP (N (VAR_ITEM contact report)))
+
+      (V using)
+
+      (NP
+
+        (DET the)
+
+        (NP
+
+          (N (VAR_ITEM gentrack))
+
+          (NP (N (VAR_INFO course and speed)))))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #17/25.
+
+Sentence: "acoustic contact on DIFAR 95 , bearing 090 , frequency 1.234 ."
+
+Tokenization: ['acoustic', 'contact', 'on', 'DIFAR', '*VAR-NUM*', ',', 'bearing', '*VAR-NUM*', ',', 'frequency', '*VAR-NUM*', '.']
+
+
+
+Parse #1/2:
+
+(S
+
+  (CP
+
+    (NP (N (VAR_EVENT acoustic contact)))
+
+    (PP
+
+      (P on)
+
+      (NP
+
+        (N (VAR_DATA (DATATYPE DIFAR) *VAR-NUM*))
+
+        (CONJ ,)
+
+        (NP
+
+          (N (VAR_INFO bearing))
+
+          (NP
+
+            (N *VAR-NUM*)
+
+            (CONJ ,)
+
+            (NP (N (VAR_DATA (DATATYPE frequency) *VAR-NUM*))))))))
+
+  .)
+
+Parse #2/2:
+
+(S
+
+  (CP
+
+    (NP (N (VAR_EVENT acoustic contact)))
+
+    (PP
+
+      (P on)
+
+      (NP
+
+        (N (VAR_DATA (DATATYPE DIFAR) *VAR-NUM*))
+
+        (CONJ ,)
+
+        (NP
+
+          (N (VAR_INFO bearing))
+
+          (NP
+
+            (N *VAR-NUM*)
+
+            (CONJ ,)
+
+            (NP (N frequency) (NP (N *VAR-NUM*))))))))
+
+  .)
+
+
+
+------------------------------------------------------------
+
+Parsing Sentence #18/25.
+
+Sentence: "contact report has been sent to the TOC QSL 0945 Zulu ."
+
+Tokenization: ['contact', 'report', 'has', 'been', 'sent', 'to', 'the', 'TOC', 'QSL', '*VAR-NUM*', 'Zulu', '.']
+
+
+Parse #1/1:
+
+(S
+
+  (CP
+
+    (VP
+
+      (NP (N (VAR_ITEM contact report)))
+
+      (V (AUX has been) (V sent)))
+
+    (PP
+
+      (P to)
+
+      (NP (DET the) (NP (N (VAR_LOCATION TOC QSL *VAR-NUM* Zulu))))))
+
+  .)
