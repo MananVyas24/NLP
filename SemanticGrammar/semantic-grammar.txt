@@ -1,0 +1,109 @@
+S -> NP '.' | NP ADJ '.' | VAR_COMPLIANCE '.'
+S -> VP '.' | VP CONJCOORD VP '.' | VP CONJPUNC S
+
+NP -> DET NP | ADJ NP
+NP -> N | N PP
+NP -> N NP | N PP NP
+NP -> N CONJ NP | N PP CONJ NP
+
+PP -> P NP | P PP
+PP -> P NP CONJ PP
+
+VP -> V | V PP
+VP -> NP V | NP V PP
+VP -> V NP | V NP PP
+VP -> V NP NP | V NP NP PP
+VP -> NP V NP | NP V NP PP
+VP -> NP V NP NP | NP V NP NP PP
+VP -> ADVERB VP | ADVERB VP PP | ADVERB PP
+
+V -> AUX
+V -> AUX V
+V -> 'established' | 'classified' | 'away' | 'tuned' | 'updated' | 'used'
+V -> 'went' | 'came' | 'flew' | 'dove' | 'sent' | 'assessed' | 'detected'
+V -> 'to' 'be'
+
+V -> VAR_INSTRUCTION | VAR_ACTIVITY
+VAR_INSTRUCTION -> 'standby' | 'send' | 'arm' | 'power' | 'estimate'
+VAR_ACTIVITY -> 'monitoring' | 'studying' | 'turning' | 'transitioning'
+VAR_ACTIVITY -> 'tuning' | 'updating' | 'using' | 'going' | 'coming' | 'flying'
+VAR_ACTIVITY -> 'diving' | 'sending' | 'assessing' | 'detecting' | 'processing'
+
+ADVERB -> 'now' | 'currently' | 'always' | 'sometimes' | 'not'
+ADVERB -> 'also' | 'often' | 'never' | 'almost' | 'probably'
+ADVERB -> 'already' | 'constantly' | 'frequently' | 'recently'
+
+AUX -> 'am' | 'is' | 'are' | 'was' | 'were' | 'be' | 'being' | 'been'
+AUX -> 'do' | 'does' | 'did'
+AUX -> 'has' | 'have' | 'had' | 'having'
+AUX -> 'can' | 'could' | 'may' | 'might' | 'must' | 'ought' 'to'
+AUX -> 'shall' | 'should' | 'will' | 'would'
+
+ADJ -> VAR_STATUS
+ADJ -> 'same' | 'different' | 'used' | 'important' | 'urgent'
+ADJ -> 'serious' | 'new' | 'old' | 'additional' | 'available'
+ADJ -> 'detected' | 'Chinese' | 'nuclear'
+
+P -> 'on' | 'in' | 'in' 'on' | 'at' | 'to' | 'by' | 'like' | 'as'
+P -> 'since' | 'for' | 'after' | 'before' | 'past' | 'during'
+P -> 'next' 'to' | 'above' | 'below' | 'over' | 'under'
+P -> 'through' | 'around' | 'into' | 'on' 'top' 'of' | 'underneath'
+P -> 'towards' | 'away' 'from' | 'across' | 'between' | 'out' 'of'
+P -> 'from' | 'of' | 'on' | 'off' | 'about' | 'with' | 'without' | 'using'
+P -> 'out' PP
+P -> 'based' PP
+
+N -> VAR_INFO | VAR_ITEM | VAR_ITEM VAR_INFO
+N -> VAR_DATA | VAR_EVENT | VAR_DIRECTION
+N -> VAR_PRONOUN | VAR_LOCATION | 'TOI' VAR_INFO
+N -> VAR_PHASE | VAR_PHASE 'phase' | VAR_PHASE 'pattern'
+N -> '*VAR-NUM*'
+N -> 'signal' | 'interest' | 'speed' | 'TOI' | 'course'
+
+DET -> 'the'
+DET -> 'my' | 'your' | 'his' | 'her' | 'its' | 'our' | 'their' | 'whose'
+DET -> 'this' | 'that' | 'these' | 'those'
+DET -> 'which'
+DET -> 'a' | 'an' | 'another' | 'other' | 'what'
+DET -> QUANTIFIER | QUANTIFIER 'of'
+
+QUANTIFIER -> 'all' | 'any' | 'both' | 'each' | 'enough' | 'every'
+QUANTIFIER -> 'few' | 'many' | 'more' | 'most' | 'no' | 'none'
+QUANTIFIER -> 'a' 'lot' | 'lots' | 'some' | 'several'
+QUANTIFIER -> 'less' 'than' | 'more' 'than' | 'fewer' 'than'
+QUANTIFIER -> 'zero' | 'one' | 'two' | 'three' | 'four'
+QUANTIFIER -> 'five' | 'six' | 'seven' | 'eight' | 'nine'
+QUANTIFIER -> 'ten' | 'twenty' | 'thirty' | 'forty' | 'fifty'
+QUANTIFIER -> 'sixty' | 'seventy' | 'eighty' | 'ninety'
+
+CONJ -> CONJPUNC | CONJCOORD
+CONJCOORD -> 'and' | 'or' | 'but' | 'either' | 'neither' | 'both'
+CONJCOORD -> 'after' | 'although' | 'before' | 'if' | 'once' | 'since'
+CONJCOORD -> 'so' | 'that' | 'until' | 'when' | 'whereas' | 'while'
+CONJCOORD -> 'as' 'long' 'as' | 'for' | 'yet'
+CONJPUNC -> ',' | ';'
+
+VAR_PRONOUN -> 'I' | 'you' | 'he' | 'she' | 'it' | 'we' | 'they'
+VAR_PRONOUN -> 'me' | 'you' | 'him' | 'her' | 'it' | 'us' | 'you' | 'them'
+VAR_PRONOUN -> 'myself' | 'yourself' | 'himself' | 'herself'
+VAR_PRONOUN -> 'itself' | 'ourselves' | 'yourselves' | 'themselves'
+VAR_PRONOUN -> 'contact' | 'who'
+
+VAR_COMPLIANCE -> 'affirm' | 'affirmative' | 'break' | 'mayday' | 'negative'
+VAR_COMPLIANCE -> 'out' | 'over' | 'repeat' | 'roger' | 'roger' 'so' 'far'
+VAR_COMPLIANCE -> 'say' 'again' | 'standby' | 'wait' | 'wilco'
+VAR_COMPLIANCE -> 'wait' 'over' | 'wait' 'out' | 'read' 'back' | 'correction' | 'radio' 'check'
+VAR_STATUS -> 'good' | 'bad' | 'great' | 'horrible' | 'terrible'
+VAR_STATUS -> 'dead' | 'alive' | 'stable' | 'unstable'
+VAR_LOCATION -> 'TOC' 'QSL' '*VAR-NUM*' 'Zulu'
+
+VAR_INFO -> 'course' 'and' 'speed' | 'drop' 'heading' | 'fix' 'position'
+VAR_INFO -> 'initial' 'course' 'estimate' | 'bearing'
+VAR_PHASE -> 'localization' | 'tracking'
+VAR_DIRECTION -> 'inbound'
+VAR_EVENT -> 'buoy' 'drops' | 'subsurface' 'contact' | 'acoustic' 'contact'
+
+VAR_DATA -> DATATYPE '*VAR-NUM*' | '*VAR-NUM*' DATATYPE
+DATATYPE -> 'DIFAR' | 'bearing' | VAR_ITEM | 'knots' | 'hertz'
+VAR_ITEM -> 'buoy' | 'buoys' | 'sonobuoy' | 'sonobuoys' | 'submarine'
+VAR_ITEM -> 'contact' 'report' | 'gentrack' | 'sensor' | 'sensors' | 'frequency' | 'frequencies'

@@ -1,0 +1,239 @@
+$ python semantic-parser.py
+Num sentences: 7
+------------------------------------------------------------
+Parsing Sentence #1/7.
+Sentence: "standby for attack pattern ."
+Tokenization: ['standby', 'for', 'attack', 'pattern', '.']
+
+There is an novel word in this sentence: attack
+Attempting to modify grammar to incorporate the novel word...
+Proposed production rule #1: [VAR_ACTIVITY -> 'attack'] ... N/A
+Proposed production rule #2: [VAR_COMPLIANCE -> 'attack'] ... N/A
+Proposed production rule #3: [VAR_DIRECTION -> 'attack'] ... N/A
+Proposed production rule #4: [VAR_EVENT -> 'attack'] ... N/A
+Proposed production rule #5: [VAR_ITEM -> 'attack'] ... N/A
+Proposed production rule #6: [VAR_STATUS -> 'attack'] ... N/A
+Proposed production rule #7: [ADJ -> 'attack'] ... N/A
+Proposed production rule #8: [VAR_PHASE -> 'attack'] ... SUCCESS
+Proposed production rule #9: [ADVERB -> 'attack'] ... N/A
+Only one production rule works so the grammar will be modified automatically...
+Modifying the grammar by adding: VAR_PHASE -> 'attack'
+Parse #1/1:
+(S
+  (VP
+    (V (VAR_INSTRUCTION standby))
+    (PP (P for) (NP (N (VAR_PHASE attack) pattern))))
+  .)
+
+------------------------------------------------------------
+Parsing Sentence #2/7.
+Sentence: "I am transitioning from the search phase to the attack pattern ."
+Tokenization: ['I', 'am', 'transitioning', 'from', 'the', 'search', 'phase', 'to', 'the', 'attack', 'pattern', '.']
+
+There is an novel word in this sentence: search
+Attempting to modify grammar to incorporate the novel word...
+Proposed production rule #1: [VAR_ACTIVITY -> 'search'] ... N/A
+Proposed production rule #2: [VAR_COMPLIANCE -> 'search'] ... N/A
+Proposed production rule #3: [VAR_DIRECTION -> 'search'] ... N/A
+Proposed production rule #4: [VAR_EVENT -> 'search'] ... N/A
+Proposed production rule #5: [VAR_ITEM -> 'search'] ... N/A
+Proposed production rule #6: [VAR_STATUS -> 'search'] ... N/A
+Proposed production rule #7: [ADJ -> 'search'] ... N/A
+Proposed production rule #8: [VAR_PHASE -> 'search'] ... SUCCESS
+Proposed production rule #9: [ADVERB -> 'search'] ... N/A
+Only one production rule works so the grammar will be modified automatically...
+Modifying the grammar by adding: VAR_PHASE -> 'search'
+Parse #1/1:
+(S
+  (VP
+    (NP (N (VAR_PRONOUN I)))
+    (V (AUX am) (V (VAR_ACTIVITY transitioning)))
+    (PP
+      (P from)
+      (NP
+        (DET the)
+        (NP
+          (N (VAR_PHASE search) phase)
+          (PP
+            (P to)
+            (NP (DET the) (NP (N (VAR_PHASE attack) pattern))))))))
+  .)
+
+------------------------------------------------------------
+Parsing Sentence #3/7.
+Sentence: "turning outbound , drop heading is 120 ."
+Tokenization: ['turning', 'outbound', ',', 'drop', 'heading', 'is', '*VAR-NUM*', '.']
+
+There is an novel word in this sentence: outbound
+Attempting to modify grammar to incorporate the novel word...
+Proposed production rule #1: [VAR_ACTIVITY -> 'outbound'] ... N/A
+Proposed production rule #2: [VAR_COMPLIANCE -> 'outbound'] ... N/A
+Proposed production rule #3: [VAR_DIRECTION -> 'outbound'] ... SUCCESS
+Proposed production rule #4: [VAR_EVENT -> 'outbound'] ... SUCCESS
+Proposed production rule #5: [VAR_ITEM -> 'outbound'] ... SUCCESS
+Proposed production rule #6: [VAR_STATUS -> 'outbound'] ... N/A
+Proposed production rule #7: [ADJ -> 'outbound'] ... N/A
+Proposed production rule #8: [VAR_PHASE -> 'outbound'] ... SUCCESS
+Proposed production rule #9: [ADVERB -> 'outbound'] ... N/A
+More than one production rule works so human-user assistance is required.
+Select a *successful* rule (by number): 3
+You entered: (3, <type 'int'>)
+Modifying the grammar by adding: VAR_DIRECTION -> 'outbound'
+Parse #1/1:
+(S
+  (VP (V (VAR_ACTIVITY turning)) (NP (N (VAR_DIRECTION outbound))))
+  (CONJPUNC ,)
+  (S
+    (VP
+      (NP (N (VAR_INFO drop heading)))
+      (V (AUX is))
+      (NP (N *VAR-NUM*)))
+    .))
+
+------------------------------------------------------------
+Parsing Sentence #4/7.
+Sentence: "good signal on some buoys ."
+Tokenization: ['good', 'signal', 'on', 'some', 'buoys', '.']
+
+Parse #1/2:
+(S
+  (NP
+    (ADJ (VAR_STATUS good))
+    (NP
+      (N signal)
+      (PP
+        (P on)
+        (NP (DET (QUANTIFIER some)) (NP (N (VAR_ITEM buoys)))))))
+  .)
+Parse #2/2:
+(S
+  (NP
+    (ADJ (VAR_STATUS good))
+    (NP
+      (N signal)
+      (PP
+        (P on)
+        (NP (DET (QUANTIFIER some)) (NP (N (VAR_ITEM buoys)))))))
+  .)
+
+------------------------------------------------------------
+Parsing Sentence #5/7.
+Sentence: "additional missiles of interest are 123 and 321 ."
+Tokenization: ['additional', 'missiles', 'of', 'interest', 'are', '*VAR-NUM*', 'and', '*VAR-NUM*', '.']
+
+There is an novel word in this sentence: missiles
+Attempting to modify grammar to incorporate the novel word...
+Proposed production rule #1: [VAR_ACTIVITY -> 'missiles'] ... N/A
+Proposed production rule #2: [VAR_COMPLIANCE -> 'missiles'] ... N/A
+Proposed production rule #3: [VAR_DIRECTION -> 'missiles'] ... SUCCESS
+Proposed production rule #4: [VAR_EVENT -> 'missiles'] ... SUCCESS
+Proposed production rule #5: [VAR_ITEM -> 'missiles'] ... SUCCESS
+Proposed production rule #6: [VAR_STATUS -> 'missiles'] ... N/A
+Proposed production rule #7: [ADJ -> 'missiles'] ... N/A
+Proposed production rule #8: [VAR_PHASE -> 'missiles'] ... SUCCESS
+Proposed production rule #9: [ADVERB -> 'missiles'] ... N/A
+More than one production rule works so human-user assistance is required.
+Select a *successful* rule (by number): 5
+You entered: (5, <type 'int'>)
+Modifying the grammar by adding: VAR_ITEM -> 'missiles'
+Parse #1/1:
+(S
+  (VP
+    (NP
+      (ADJ additional)
+      (NP (N (VAR_ITEM missiles)) (PP (P of) (NP (N interest)))))
+    (V (AUX are))
+    (NP (N *VAR-NUM*) (CONJ (CONJCOORD and)) (NP (N *VAR-NUM*))))
+  .)
+
+------------------------------------------------------------
+Parsing Sentence #6/7.
+Sentence: "warning signal for some missiles ."
+Tokenization: ['warning', 'signal', 'for', 'some', 'missiles', '.']
+
+There is an novel word in this sentence: warning
+Attempting to modify grammar to incorporate the novel word...
+Proposed production rule #1: [VAR_ACTIVITY -> 'warning'] ... SUCCESS
+Proposed production rule #2: [VAR_COMPLIANCE -> 'warning'] ... N/A
+Proposed production rule #3: [VAR_DIRECTION -> 'warning'] ... SUCCESS
+Proposed production rule #4: [VAR_EVENT -> 'warning'] ... SUCCESS
+Proposed production rule #5: [VAR_ITEM -> 'warning'] ... SUCCESS
+Proposed production rule #6: [VAR_STATUS -> 'warning'] ... SUCCESS
+Proposed production rule #7: [ADJ -> 'warning'] ... SUCCESS
+Proposed production rule #8: [VAR_PHASE -> 'warning'] ... SUCCESS
+Proposed production rule #9: [ADVERB -> 'warning'] ... N/A
+More than one production rule works so human-user assistance is required.
+Select a *successful* rule (by number): 6
+You entered: (6, <type 'int'>)
+Modifying the grammar by adding: VAR_STATUS -> 'warning'
+Parse #1/2:
+(S
+  (NP
+    (ADJ (VAR_STATUS warning))
+    (NP
+      (N signal)
+      (PP
+        (P for)
+        (NP (DET (QUANTIFIER some)) (NP (N (VAR_ITEM missiles)))))))
+  .)
+Parse #2/2:
+(S
+  (NP
+    (ADJ (VAR_STATUS warning))
+    (NP
+      (N signal)
+      (CONJ (CONJCOORD for))
+      (NP (DET (QUANTIFIER some)) (NP (N (VAR_ITEM missiles))))))
+  .)
+
+------------------------------------------------------------
+Parsing Sentence #7/7.
+Sentence: "currently in the attack phase and monitoring some missiles for radar contact ."
+Tokenization: ['currently', 'in', 'the', 'attack', 'phase', 'and', 'monitoring', 'some', 'missiles', 'for', 'radar', 'contact', '.']
+
+There is an novel word in this sentence: radar
+Attempting to modify grammar to incorporate the novel word...
+Proposed production rule #1: [VAR_ACTIVITY -> 'radar'] ... N/A
+Proposed production rule #2: [VAR_COMPLIANCE -> 'radar'] ... N/A
+Proposed production rule #3: [VAR_DIRECTION -> 'radar'] ... SUCCESS
+Proposed production rule #4: [VAR_EVENT -> 'radar'] ... SUCCESS
+Proposed production rule #5: [VAR_ITEM -> 'radar'] ... SUCCESS
+Proposed production rule #6: [VAR_STATUS -> 'radar'] ... SUCCESS
+Proposed production rule #7: [ADJ -> 'radar'] ... SUCCESS
+Proposed production rule #8: [VAR_PHASE -> 'radar'] ... SUCCESS
+Proposed production rule #9: [ADVERB -> 'radar'] ... N/A
+More than one production rule works so human-user assistance is required.
+Select a *successful* rule (by number): 5
+You entered: (5, <type 'int'>)
+Modifying the grammar by adding: VAR_ITEM -> 'radar'
+Parse #1/2:
+(S
+  (VP
+    (ADVERB currently)
+    (PP (P in) (NP (DET the) (NP (N (VAR_PHASE attack) phase)))))
+  (CONJCOORD and)
+  (VP
+    (V (VAR_ACTIVITY monitoring))
+    (NP
+      (DET (QUANTIFIER some))
+      (NP
+        (N (VAR_ITEM missiles))
+        (PP
+          (P for)
+          (NP (N (VAR_ITEM radar)) (NP (N (VAR_PRONOUN contact))))))))
+  .)
+Parse #2/2:
+(S
+  (VP
+    (ADVERB currently)
+    (PP (P in) (NP (DET the) (NP (N (VAR_PHASE attack) phase)))))
+  (CONJCOORD and)
+  (VP
+    (V (VAR_ACTIVITY monitoring))
+    (NP
+      (DET (QUANTIFIER some))
+      (NP
+        (N (VAR_ITEM missiles))
+        (PP (P for) (NP (N (VAR_ITEM radar))))
+        (NP (N (VAR_PRONOUN contact))))))
+  .)
